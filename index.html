@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kashmir - Heaven on Earth</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f1e8;
+    color: #24352b;
+}
+
+/* NAVBAR */
+nav {
+    background: #173d30;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #e8c77b;
+    font-size: 27px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #e8c77b;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 85vh;
+    background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=1600")
+    center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    padding: 14px 30px;
+    border: none;
+    background: #d9b56d;
+    color: #173d30;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #173d30;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* DESTINATIONS */
+.places {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    color: #173d30;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 15px;
+}
+
+/* CULTURE */
+.culture {
+    background: #e8e1d1;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #173d30;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #e8c77b;
+    margin-bottom: 10px;
+}
+
+/* MOBILE */
+@media(max-width:700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 7px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <h2>♡ KASHMIR</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#places">Places</a>
+        <a href="#culture">Culture</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <div>
+        <h1>Welcome to Kashmir</h1>
+        <p>The Paradise on Earth</p>
+        <button onclick="document.getElementById('about').scrollIntoView()">
+            Explore Kashmir
+        </button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>Discover Kashmir</h2>
+    <p>
+        Kashmir is a land of breathtaking mountains, beautiful lakes,
+        green valleys and rich traditions. Known as Paradise on Earth,
+        it welcomes visitors with its natural beauty, warm hospitality
+        and unforgettable experiences.
+    </p>
+</section>
+
+<!-- PLACES -->
+<section id="places">
+    <h2>Famous Destinations</h2>
+
+    <div class="places">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?w=600">
+            <h3>Dal Lake</h3>
+            <p>Experience beautiful waters and traditional houseboats.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=600">
+            <h3>Gulmarg</h3>
+            <p>Explore snow-covered mountains and green meadows.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=600">
+            <h3>Pahalgam</h3>
+            <p>Discover peaceful valleys and beautiful rivers.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CULTURE -->
+<section class="culture" id="culture">
+    <h2>Kashmiri Culture & Heritage</h2>
+    <p>
+        Kashmir is famous for its traditional handicrafts, Pashmina shawls,
+        beautiful carpets, Kashmiri music, traditional clothing and
+        delicious Wazwan cuisine.
+        Its culture reflects hospitality, creativity and heritage.
+    </p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Beauty of Kashmir</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>KASHMIR – PARADISE ON EARTH</h2>
+    <p>Discover the beauty, culture and traditions of Kashmir.</p>
+    <p>© 2026 Kashmir Tourism Website</p>
+</footer>
+
+</body>
+</html>
